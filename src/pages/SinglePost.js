@@ -14,8 +14,6 @@ import { Link } from 'react-router-dom'
 import LikeButton from './../components/LikeButton'
 import CommentIcon from '@material-ui/icons/Comment'
 import { useMutation } from '@apollo/react-hooks'
-
-import DeleteIcon from '@material-ui/icons/Delete'
 import { useGlobalContext } from '../context/auth'
 import DeleteButton from '../components/DeleteButton'
 import { Divider, Grid, TextField, Tooltip } from '@material-ui/core'
@@ -197,7 +195,7 @@ const SinglePost = (props) => {
   }
 }
 const ADD_COMMENT = gql`
-  mutation($postId: ID!, $body: String!) {
+  mutation ($postId: ID!, $body: String!) {
     createComment(postId: $postId, body: $body) {
       id
       commentCount
@@ -211,7 +209,7 @@ const ADD_COMMENT = gql`
   }
 `
 const FETCHPOST = gql`
-  query($postId: ID!) {
+  query ($postId: ID!) {
     getPost(idpost: $postId) {
       id
       body

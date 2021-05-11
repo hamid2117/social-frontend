@@ -6,11 +6,12 @@ import Home from './pages/Home'
 import Login from './pages/Login'
 import Register from './pages/Register'
 import NavBar from './components/NavBar'
-import { Container, ThemeProvider, MuiThemeProvider } from '@material-ui/core'
-import { createMuiTheme } from '@material-ui/core/styles/createMuiTheme'
+import { Container, MuiThemeProvider } from '@material-ui/core'
+import { createMuiTheme } from '@material-ui/core/styles'
 import { AuthProvider } from './context/auth'
 import AuthRoute from './utils/AuthRoute'
 import SinglePost from './pages/SinglePost'
+
 const theme = createMuiTheme({
   palette: {
     primary: {
