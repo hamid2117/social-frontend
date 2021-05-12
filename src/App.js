@@ -15,7 +15,7 @@ import SinglePost from './pages/SinglePost'
 const theme = createMuiTheme({
   palette: {
     background: {
-      default: '#462c78',
+      default: '#f3f1f8',
     },
     primary: {
       main: '#0277bd',
